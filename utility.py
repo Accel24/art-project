@@ -2,6 +2,7 @@ import os
 
 
 
+
 class utility:
     def google(args):
         os.system("start https://www.google.com/search?q="+args)
@@ -10,18 +11,19 @@ class utility:
         passwordExist = None
 
 
-        args = args.lower() 
-        f = open("password.txt","r") 
+        args = args.lower()
+        f = open("password.txt","r")
         line = f.readline()
         while line:
+            line = line.split(":")
 
-            if args in line:
+            if args in line[0]:
 
-                print(line)
+                print(line[1])
                 passwordExist = True
                 print("\n\n\n Press enter to continue")
                 input()
-               
+
                 break
             else:
 
@@ -36,7 +38,7 @@ class utility:
             read = None
         else:
 
-            
+
             print("Password not found\n")
             print("Would you like to add it?\n")
             if input().upper() == "YES":
@@ -48,13 +50,12 @@ class utility:
                 f.close()
                 f = open("password.txt","a")
                 f.write(args + ":" + password+"\n")
-                print("Done")
-                time.sleep(1)
-                print("Reseting...")
+                print("Done\n")
+                print("Press enter to continue")
+                input()
+
+
 
             else:
-                
+
                 print("Understood.Cleaning...")
-                time.sleep(1)
-        
-        
