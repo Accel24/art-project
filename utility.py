@@ -19,6 +19,8 @@ class utility:
 
                 print(line)
                 passwordExist = True
+                print("\n\n\n Press enter to continue")
+                input()
                
                 break
             else:
