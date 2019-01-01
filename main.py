@@ -1,5 +1,5 @@
 import time
-
+from menu import menu
 
 def main():
     print("Input your password:")
@@ -12,6 +12,18 @@ def main():
     print("You are logged in\n")
     time.sleep(3)
     os.system('cls')
+    done = False
+    while not done:
+        print("What would you like to do?\n")
+        userWish = input()
+        menu(userWish)
+        os.system('cls')
+
+        
+main()
+        
+        
+        
     
     
     
