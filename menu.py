@@ -6,3 +6,7 @@ def menu(args):
         args = args[1]
         args = args.replace(" ","%20")
         utility.google(args)
+    if args.upper().startswith("PASSWORD:"):
+        args = args.split(":")
+        args = args[1]
+        utility.password(args)
