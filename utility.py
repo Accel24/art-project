@@ -42,7 +42,7 @@ class utility:
             if input().upper() == "YES":
 
                 print("Working on it")
-                print("What password would you like to assign to account?\n"+ args+"\n")
+                print("What password would you like to assign to account:"+ args+"\n")
 
                 password = input()
                 f.close()
