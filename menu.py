@@ -1,4 +1,4 @@
-from utility import utility   
+from utility import utility
 
 def menu(args):
     if args.upper().startswith("GOOGLE:"):
@@ -10,3 +10,5 @@ def menu(args):
         args = args.split(":")
         args = args[1]
         utility.password(args)
+    if args.upper().startswith("EXIT"):
+        exit()
