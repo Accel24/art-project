@@ -1,4 +1,4 @@
-import utility    
+from utility import utility   
 
 def menu(args):
     if args.upper().startswith("GOOGLE:"):
